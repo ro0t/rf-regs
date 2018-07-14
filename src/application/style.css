@@ -1,0 +1,129 @@
+/** Variables **/
+$gutter: 25px;
+
+body {
+	background: url(../assets/background.jpg) no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 1rem;
+}
+
+input, button, p {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 1rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+footer {
+	width: 100%;
+
+	p {
+		text-align: center;
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+}
+
+.wrapper {
+	width: 550px;
+	margin: 0 auto;
+
+	header {
+		padding: calc($gutter * 2) 0 $gutter 0;
+
+		p {
+			line-height: 28px;
+			text-align: center;
+
+			strong {
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.logo {
+	background: url(../assets/R18.svg) no-repeat;
+	background-size: 100%;
+	width: 381px;
+	height: 100px;
+	margin: 0 auto;
+	display: block;
+	outline: 0;
+	text-decoration: none;
+	margin-bottom: $gutter;
+}
+
+.content {
+	position: relative;
+	margin-bottom: calc($gutter * 2);
+
+	> div {
+		position: relative;
+		border-radius: 10px;
+		background: #fff;
+		padding: calc($gutter * 2);
+		box-shadow: 0 0 15px rgba(0,0,0,.08);
+		animation: fadeInUp .25s linear;
+		animation-fill-mode: forwards;
+
+	}
+
+}
+
+@keyframes fadeInUp {
+
+	from {
+		top: 40px;
+		opacity: 0;
+	}
+
+	to {
+		top: 0;
+		opacity: 1;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+
+	body, html {
+		font-size: 0.85rem;
+	}
+
+	header {
+		p {
+			padding: 0 $gutter;
+			
+			br {
+				display: none;
+			}
+
+			strong {
+				display: block;
+			}
+		}
+	}
+
+	.logo {
+		width: 260px;
+		height: 68px;
+	}
+
+	.wrapper {
+		width: 100%;
+	}
+
+	.content > div {
+		padding: calc($gutter * 2) calc($gutter / 1.5);
+	}
+
+}

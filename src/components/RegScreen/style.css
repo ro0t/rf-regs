@@ -1,0 +1,61 @@
+$gutter: 25px;
+$color: #0073cf;
+
+form {
+
+	label {
+		cursor: pointer;
+		font-size: 16px;
+
+		span {
+			color: red;
+		}
+	}
+
+	.inputContainer {
+		margin-bottom: $gutter;
+	}
+
+	input {
+		width: 100%;
+		display: block;
+		cursor: pointer;
+		background-color: #F9F9F9;
+		border: 1px solid #D6D6D6;
+		border-radius: 3px;
+		padding: 10px 20px;
+		outline: 0;
+		box-shadow: none;
+		transition: all .2s linear;
+		margin-top: 10px;
+
+		&:focus {
+			background-color: #fff;
+			border-color: $color;
+			box-shadow: 0 0 10px rgba(0, 115, 207, .3);
+		}
+	}
+
+}
+
+.button {
+	text-align: center;
+
+	button {
+		border-radius: 25px;
+		padding: 8px 24px;
+		outline: 0;
+		transition: all .2s linear;
+		font-size: 18px;
+		cursor: pointer;
+		border: 1px solid $color;
+		background-color: #fff;
+		color: $color;
+
+		&:hover {
+			color: #fff;
+			border: 1px solid transparent;
+			background: $color;
+		}
+	}
+}
